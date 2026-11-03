@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang cá nhân của Phan Trọng Hiển, chia sẻ thông tin, kỹ năng và dự án về lập trình.">
+    <meta property="og:title" content="Trang cá nhân | Phan Trọng Hiển">
+    <meta property="og:description" content="Trang cá nhân của Phan Trọng Hiển, nơi chia sẻ kiến thức và kinh nghiệm về lập trình và công nghệ.">
+    <meta property="og:type" content="website">
+    <title>Trang cá nhân | Phan Trọng Hiển</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content">Bỏ qua điều hướng</a>
+
+    <header class="site-header">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Phan Trọng Hiển</h1>
+                <p>Lập trình viên &amp; người yêu công nghệ</p>
+            </div>
+
+            <nav aria-label="Điều hướng chính">
+                <ul class="nav-links">
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#skills">Kỹ năng</a></li>
+                    <li><a href="#projects">Dự án</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Giao diện: Tối</button>
+        </div>
+    </header>
+
+    <main id="main-content" class="site-main">
+        <section id="home" class="hero" aria-labelledby="welcome-heading">
+            <img src="img/avatar.jpg" alt="Ảnh đại diện của Phan Trọng Hiển" width="160" height="160">
+            <h2 id="welcome-heading">Chào mừng đến với trang cá nhân của tôi!</h2>
+            <p>Tôi là Phan Trọng Hiển, sinh viên Kỹ thuật phần mềm đam mê công nghệ và chia sẻ kiến thức.</p>
+            <p><a href="#contact">Gửi lời nhắn cho tôi</a></p>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">Thông tin cá nhân</h2>
+            <article>
+                <h3>Đôi nét về tôi</h3>
+                <p>Họ tên: <strong>Phan Trọng Hiển</strong></p>
+                <p>Quê quán: Tiền Giang</p>
+                <p>Ngành học: Kỹ thuật phần mềm (CNTT)</p>
+                <p>Năm học: Năm 2</p>
+                <p><a href="https://guns.lol/lulu_mii" target="_blank" rel="noopener noreferrer">Trang mạng xã hội</a></p>
+            </article>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Kỹ năng và quá trình học tập</h2>
+            <table>
+                <caption>Các kỹ năng đang học tập và rèn luyện</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Kỹ năng</th>
+                        <th scope="col">Mức độ</th>
+                        <th scope="col">Ghi chú</th>
+                    </tr>
+                </thead>
+                <tbody id="skills-table-body"></tbody>
+            </table>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Dự án tiêu biểu</h2>
+            <p id="projects-status" role="status" aria-live="polite">Đang tải dự án...</p>
+            <ul id="projects-list" class="project-list"></ul>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Liên hệ với tôi</h2>
+            <p>Các trường có dấu * là bắt buộc.</p>
+            <form id="contact-form">
+                <div>
+                    <label for="contact-name">Họ và tên *</label>
+                    <input
+                        id="contact-name"
+                        name="name"
+                        type="text"
+                        autocomplete="name"
+                        pattern="[A-Za-zÀ-ỹ\s'-]{2,50}"
+                        title="Nhập từ 2 đến 50 ký tự chữ, khoảng trắng, dấu nháy hoặc gạch nối."
+                        required>
+                </div>
+                <div>
+                    <label for="contact-email">Email *</label>
+                    <input
+                        id="contact-email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        required>
+                </div>
+                <div>
+                    <label for="contact-phone">Số điện thoại</label>
+                    <input
+                        id="contact-phone"
+                        name="phone"
+                        type="tel"
+                        autocomplete="tel"
+                        pattern="[0-9+().\s-]{9,15}"
+                        title="Nhập số điện thoại gồm 9 đến 15 chữ số hoặc các ký tự +, dấu cách, dấu chấm, ngoặc đơn và gạch nối.">
+                </div>
+                <div>
+                    <label for="contact-date">Ngày muốn liên hệ *</label>
+                    <input id="contact-date" name="contact-date" type="date" required>
+                </div>
+                <div>
+                    <label for="contact-message">Nội dung *</label>
+                    <textarea id="contact-message" name="message" rows="5" minlength="10" required></textarea>
+                </div>
+                <button type="submit">Gửi lời nhắn</button>
+            </form>
+            <p id="contact-status" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <address>
+            Địa chỉ: Tiền Giang<br>
+            Email: <a href="mailto:phantronghien11b2@gmail.com">phantronghien11b2@gmail.com</a><br>
+            Điện thoại: <a href="tel:+84936633230">0936633230</a>
+        </address>
+        <p>&copy; 2026 Phan Trọng Hiển. Cập nhật <time datetime="2026-09-07">07/09/2026</time>.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('mousemove', (event) => {
+            const x = (event.clientX / window.innerWidth - 0.5) * 24;
+            const y = (event.clientY / window.innerHeight - 0.5) * 24;
+            document.body.style.setProperty('--move-x', `${x}px`);
+            document.body.style.setProperty('--move-y', `${y}px`);
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+	"projects": [
+		{
+			"title": "Trang cá nhân",
+			"description": "Trang giới thiệu bản thân, kỹ năng và thông tin liên hệ.",
+			"technology": "HTML, CSS, JavaScript"
+		},
+		{
+			"title": "Ứng dụng quản lý công việc",
+			"description": "Giao diện mẫu để tạo và theo dõi các công việc hằng ngày.",
+			"technology": "HTML, CSS, JavaScript"
+		},
+		{
+			"title": "Website giới thiệu sản phẩm",
+			"description": "Trang trình bày thông tin sản phẩm theo bố cục tương thích di động.",
+			"technology": "HTML, CSS"
+		}
+	]
+}
